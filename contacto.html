@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Contacto</title>
+   <script>
+		function nuevodato(){
+			var datos = {
+				"nombre" : 	document.getElementById("nombre").value,
+				"email" : 	document.getElementById("email").value,
+				"mensaje" : document.getElementById("mensaje").value				
+			};
+			fetch('http://localhost:4000/nuevo',
+			{method:'post',
+			headers:{
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(datos),
+			}).
+			then(function(response) {
+			console.log(JSON.stringify(datos))
+				if(response.ok) {
+					console.log("OK");
+					return response.text()
+					}else{
+					throw "error";
+					}
+			});
+		}
+	</script> 
+    
+    
+    
+</head>
+<body>
+<nav>
+
+<div class="menu">
+ <div class="CV">Curriculum Vitae</div>
+<a href="index.html">Home</a>   |<a href="portfolio.html">Portfolio</a>|   <a href="contacto.html">Correo</a>   |  
+</div>
+</nav>
+<br>
+<br>
+    		<div class="pcontacto">
+			<h2 class="ftitulo">Contactame</h2>
+			<h3 class="subtitulo">Siempre es bueno estar comunicados</h3>
+			<div class="footer">
+			<form id="formulario" action="">
+				<input type="text"	 id="nombre"     placeholder="Ingresá tu nombre" value="" required>
+				<input type="email"  id="email"      placeholder="Tu mail" required>
+				<textarea 	         id="mensaje"    cols="30" rows="10" placeholder="Ingresá tu mensaje" required></textarea>
+				<input type="button" id="boton"      value="Enviar" onclick="nuevodato();">
+			</form>
+			</div>
+		<div>	
+
+
+
+</body>
+</html>

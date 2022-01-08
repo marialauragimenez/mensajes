@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+	<!--- CSS de Boostrap -->
+	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>PortFolio</title>
+</head>
+<body>
+<nav>
+	<div class="menu">
+	<div class="CV">Curriculum Vitae</div>
+		<a href="index.html">Home</a>   |<a href="portfolio.html">Portfolio</a>|   <a href="contacto.html">Correo</a>   |  
+	</div>
+</nav>
+
+<div class="portfolio">
+ 
+		
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<!--- Indicadores - guiones de abajo, uno por cada imagen -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <!--- Imagenes con titulo y texto alternativo -->
+  <div class="carousel-inner" style="width:800px; margin:auto;" >
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="img/portfolio7.jpg" style="height:500px;"  alt="Web1" title="Mi web 1">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="img/portfolio6.jpg" style="height:500px;"   alt="Web2" title="Mi web 2">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="img/portfolio8.jpg" style="height:500px;"   alt="Web3" title="Mi web 3">
+    </div>
+	<div class="carousel-item" data-bs-interval="2000">
+      <img src="img/portfolio9.jpg" style="height:500px;"   alt="Web4" title="Mi web 4">
+    </div>
+	
+  </div>
+    <!--- Botones 'Flechitas' para avanzar o retroceder una imagen -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev" style="color:black;">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span><h2><< Ant.</h2></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next" style="color:black;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span ><h2>Sig. >></h2></span>
+  </button>
+  </div>
+
+</div>
+  <!--- Script de Boostrap -->
+	<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
